@@ -1,3 +1,5 @@
+package br.com.lista_list.model;
+
 import java.util.Scanner;
 
 public class BolsaDeValores {
@@ -71,5 +73,4 @@ public class BolsaDeValores {
 		System.out.println("Volume de Negociações: " + getVolume());
 		System.out.println("Variação Diária: " + getVariacao() + "%");
 	}
-
 }

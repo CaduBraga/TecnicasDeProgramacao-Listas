@@ -1,27 +1,29 @@
+package br.com.lista_list.model;
+
 import java.util.Scanner;
 
 public class TV {
-	private String marca;
-	private double tamanho;
-	private String resolucao;
-	private double preco;
+	private static String marca;
+	private static double tamanho;
+	private static String resolucao;
+	private static double preco;
 
 	public TV() {
-		this.marca = "";
-		this.tamanho = 0.0;
-		this.resolucao = "";
-		this.preco = 0.0;
+		TV.marca = "";
+		TV.tamanho = 0.0;
+		TV.resolucao = "";
+		TV.preco = 0.0;
 	}
 
 	public TV(String marca, double tamanho, String resolucao, double preco) {
-		this.marca = marca;
-		this.tamanho = tamanho;
-		this.resolucao = resolucao;
-		this.preco = preco;
+		TV.marca = marca;
+		TV.tamanho = tamanho;
+		TV.resolucao = resolucao;
+		TV.preco = preco;
 	}
 
 	public void setMarca(String marca) {
-		this.marca = marca;
+		TV.marca = marca;
 	}
 
 	public String getMarca() {
@@ -29,7 +31,7 @@ public class TV {
 	}
 
 	public void setTamanho(double tamanho) {
-		this.tamanho = tamanho;
+		TV.tamanho = tamanho;
 	}
 
 	public double getTamanho() {
@@ -37,7 +39,7 @@ public class TV {
 	}
 
 	public void setResolucao(String resolucao) {
-		this.resolucao = resolucao;
+		TV.resolucao = resolucao;
 	}
 
 	public String getResolucao() {
@@ -45,7 +47,7 @@ public class TV {
 	}
 
 	public void setPreco(double preco) {
-		this.preco = preco;
+		TV.preco = preco;
 	}
 
 	public double getPreco() {
@@ -54,14 +56,14 @@ public class TV {
 
 	public void preencherDados(Scanner scanner) {
 		System.out.print("Marca: ");
-		this.marca = scanner.nextLine();
+		TV.marca = scanner.nextLine();
 		System.out.print("Tamanho (polegadas): ");
-		this.tamanho = scanner.nextDouble();
+		TV.tamanho = scanner.nextDouble();
 		scanner.nextLine();
 		System.out.print("Resolução (pixels): ");
-		this.resolucao = scanner.nextLine();
+		TV.resolucao = scanner.nextLine();
 		System.out.print("Preço: R$");
-		this.preco = scanner.nextDouble();
+		TV.preco = scanner.nextDouble();
 		scanner.nextLine();
 	}
 
