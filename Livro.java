@@ -1,36 +1,14 @@
 public class Livro {
 
-    private String titulo;
-    private String autor;
-    private int anoDePublicacao;
+	String titulo;
+	String autor;
+	int anoDePublicacao;
 
-    public Livro() {
-        this.titulo = "";
-        this.autor = "";
-        this.anoDePublicacao = 0;
-    }
+	public Livro() {
 
-    public String getTitulo() {
-        return titulo;
-    }
+		this.titulo = "";
+		this.autor = "";
+		this.anoDePublicacao = 0;
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public String getAutor() {
-        return autor;
-    }
-
-    public void setAutor(String autor) {
-        this.autor = autor;
-    }
-
-    public int getAnoDePublicacao() {
-        return anoDePublicacao;
-    }
-
-    public void setAnoDePublicacao(int anoDePublicacao) {
-        this.anoDePublicacao = anoDePublicacao;
-    }
+	}
 }
