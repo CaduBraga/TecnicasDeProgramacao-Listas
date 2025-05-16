@@ -1,24 +1,46 @@
 public class Produto {
-	
-    String nome;
-    double preco;
-    String descricao;
-    int quantidadeEstoque;
 
-	public Produto(String nome, double preco, String descricao, int quantidadeEstoque){
-		
-		this.nome = nome;
-        this.preco = preco;
-        this.descricao = descricao;
-        this.quantidadeEstoque = quantidadeEstoque;
+	private String nome;
+	private double preco;
+	private String descricao;
+	private int quantidadeEstoque;
+
+	public Produto() {
+		this.nome = "";
+		this.preco = 0.0;
+		this.descricao = "";
+		this.quantidadeEstoque = 0;
 	}
-	
-	 public void visualizarItens(){
-		 
-	        System.out.println("Nome do Produto: " + nome);
-	        System.out.println("Preço: R$" + String.format("%.2f", preco));
-	      //Sei que ainda não aprendemos o String.format, mas descobri como usar e decidi implementá-lo no código
-	        System.out.println("Descrição: " + descricao);
-	        System.out.println("Quantidade em Estoque: " + quantidadeEstoque);
-	 }
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public double getPreco() {
+		return preco;
+	}
+
+	public void setPreco(double preco) {
+		this.preco = preco;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public int getQuantidadeEstoque() {
+		return quantidadeEstoque;
+	}
+
+	public void setQuantidadeEstoque(int quantidadeEstoque) {
+		this.quantidadeEstoque = quantidadeEstoque;
+	}
 }

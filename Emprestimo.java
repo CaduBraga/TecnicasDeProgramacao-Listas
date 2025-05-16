@@ -1,22 +1,37 @@
 import java.time.LocalDate;
 public class Emprestimo {
 
-	double valor;
-	LocalDate dataDeEmprestimo;
-	int numeroDeParcelas;
+	private double valor;
+	private LocalDate dataDeEmprestimo;
+	private int numeroDeParcelas;
 
-	public Emprestimo(double valor, LocalDate dataDeEmprestimo, int numeroDeParcelas) {
-
-		this.valor = valor;
-		this.dataDeEmprestimo = dataDeEmprestimo;
-		this.numeroDeParcelas = numeroDeParcelas;
+	public Emprestimo() {
+		this.valor = 0.0;
+		this.dataDeEmprestimo = null;
+		this.numeroDeParcelas = 0;
 	}
 
-	public void visualizarEmprestimo() {
-		
-		System.out.println("Valor: R$" + String.format("%.2f", valor));
-		//Sei que ainda não aprendemos o String.format, mas descobri como usar e decidi implementá-lo no código
-		System.out.println("Data do Empréstimo: " + dataDeEmprestimo);
-		System.out.println("Número de Parcelas: " + numeroDeParcelas);
+	public double getValor() {
+		return valor;
+	}
+
+	public void setValor(double valor) {
+		this.valor = valor;
+	}
+
+	public LocalDate getDataDeEmprestimo() {
+		return dataDeEmprestimo;
+	}
+
+	public void setDataDeEmprestimo(LocalDate dataDeEmprestimo) {
+		this.dataDeEmprestimo = dataDeEmprestimo;
+	}
+
+	public int getNumeroDeParcelas() {
+		return numeroDeParcelas;
+	}
+
+	public void setNumeroDeParcelas(int numeroDeParcelas) {
+		this.numeroDeParcelas = numeroDeParcelas;
 	}
 }

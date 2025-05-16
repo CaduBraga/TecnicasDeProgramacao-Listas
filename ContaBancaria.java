@@ -1,17 +1,25 @@
 public class ContaBancaria {
-	int numeroDaConta;
-	double saldo;
+	private int numeroDaConta;
+	private double saldo;
 
-	public ContaBancaria(int numeroDaConta, double saldo) {
-
-		this.numeroDaConta = numeroDaConta;
-		this.saldo = saldo;
+	public ContaBancaria() {
+		this.numeroDaConta = 0;
+		this.saldo = 0.0;
 	}
 
-	public void visualizarConta() {
-		
-		System.out.println("Número da Conta: " + numeroDaConta);
-		System.out.println("Saldo: R$ " + String.format("%.2f", saldo));
-		//Sei que ainda não aprendemos o String.format, mas descobri como usar e decidi implementá-lo no código
+	public int getNumeroDaConta() {
+		return numeroDaConta;
+	}
+
+	public void setNumeroDaConta(int numeroDaConta) {
+		this.numeroDaConta = numeroDaConta;
+	}
+
+	public double getSaldo() {
+		return saldo;
+	}
+
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
 	}
 }

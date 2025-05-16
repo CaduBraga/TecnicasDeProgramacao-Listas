@@ -1,21 +1,36 @@
 public class Funcionario {
-	
-    String nome;
-    double salario;
-    String cargo;
-    
-	public Funcionario(String nome, double salario, String cargo){
 
+    private String nome;
+    private double salario;
+    private String cargo;
+
+    public Funcionario() {
+        this.nome = "";
+        this.salario = 0.0;
+        this.cargo = "";
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(double salario) {
         this.salario = salario;
+    }
+
+    public String getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(String cargo) {
         this.cargo = cargo;
-	}
-	
-    public void visualizarFuncionario(){
-    	
-        System.out.println("Nome: " + nome);
-        System.out.println("Salário: R$" + String.format("%.2f", salario));
-      //Sei que ainda não aprendemos o String.format, mas descobri como usar e decidi implementá-lo no código
-        System.out.println("Cargo: " + cargo);
     }
 }
