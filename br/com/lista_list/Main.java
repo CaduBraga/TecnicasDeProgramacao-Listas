@@ -6,7 +6,7 @@ import br.com.lista_list.model.Listas;
 import br.com.lista_list.service.*;
 import br.com.lista_list.views.Escolhas;
 
-public class Principal {
+public class Main {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 

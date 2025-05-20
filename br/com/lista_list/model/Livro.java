@@ -53,24 +53,4 @@ public class Livro {
 	public double getPreco() {
 		return preco;
 	}
-
-	public void preencherDados(Scanner scanner) {
-		System.out.print("Título: ");
-		this.titulo = scanner.nextLine();
-		System.out.print("Autor: ");
-		this.autor = scanner.nextLine();
-		System.out.print("Número de páginas: ");
-		this.paginas = scanner.nextInt();
-		System.out.print("Preço: R$");
-		this.preco = scanner.nextDouble();
-		scanner.nextLine();
-	}
-
-	public void imprimirDados() {
-		System.out.println("Informações do Livro:");
-		System.out.println("Título: " + getTitulo());
-		System.out.println("Autor: " + getAutor());
-		System.out.println("Número de páginas: " + getPaginas());
-		System.out.printf("Preço: R$%.2f\n", getPreco());
-	}
 }

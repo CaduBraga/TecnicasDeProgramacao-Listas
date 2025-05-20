@@ -61,24 +61,4 @@ public class Musica {
 	public void desligarMusica() {
 		System.out.println("Música desligada.");
 	}
-
-	public void preencherDados(Scanner scanner) {
-		System.out.print("Título: ");
-		this.titulo = scanner.nextLine();
-		System.out.print("Artista: ");
-		this.artista = scanner.nextLine();
-		System.out.print("Duração (minutos): ");
-		this.duracao = scanner.nextDouble();
-		System.out.print("Preço: R$");
-		this.preco = scanner.nextDouble();
-		scanner.nextLine();
-	}
-
-	public void imprimirDados() {
-		System.out.println("Informações da Música:");
-		System.out.println("Título: " + getTitulo());
-		System.out.println("Artista: " + getArtista());
-		System.out.printf("Duração: %.2f minutos\n", getDuracao());
-		System.out.printf("Preço: R$%.2f\n", getPreco());
-	}
 }

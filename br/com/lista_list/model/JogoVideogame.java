@@ -53,23 +53,4 @@ public class JogoVideogame {
 	public double getPreco() {
 		return preco;
 	}
-
-	public void preencherDados(Scanner scanner) {
-		System.out.print("Título: ");
-		this.titulo = scanner.nextLine();
-		System.out.print("Plataforma: ");
-		this.plataforma = scanner.nextLine();
-		System.out.print("Classificação etária (anos): ");
-		this.classificacao = scanner.nextLine();
-		System.out.print("Preço: ");
-		this.preco = scanner.nextDouble();
-		scanner.nextLine();
-	}
-
-	public void imprimirDados() {
-		System.out.println("Informações do Jogo:");
-		System.out.println("Título: " + getTitulo());
-		System.out.println("Plataforma: " + getPlataforma());
-		System.out.println("Classificação Etária: " + getClassificacao() + " anos");
-	}
 }

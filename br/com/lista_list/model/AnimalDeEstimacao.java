@@ -53,24 +53,4 @@ public class AnimalDeEstimacao {
 	public double getPeso() {
 		return peso;
 	}
-
-	public void preencherDados(Scanner scanner) {
-		System.out.print("Espécie: ");
-		this.especie = scanner.nextLine();
-		System.out.print("Raça: ");
-		this.raca = scanner.nextLine();
-		System.out.print("Idade (anos): ");
-		this.idade = scanner.nextInt();
-		System.out.print("Peso (kg): ");
-		this.peso = scanner.nextDouble();
-		scanner.nextLine();
-	}
-
-	public void imprimirDados() {
-		System.out.println("Informações do Animal de estimação:");
-		System.out.println("Espécie: " + getEspecie());
-		System.out.println("Raça: " + getRaca());
-		System.out.println("Idade: " + getIdade() + " anos");
-		System.out.printf("Peso: %.2fkg\n", getPeso());
-	}
 }

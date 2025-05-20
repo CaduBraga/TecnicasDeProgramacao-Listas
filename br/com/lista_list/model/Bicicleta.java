@@ -53,24 +53,4 @@ public class Bicicleta {
 	public double getPreco() {
 		return preco;
 	}
-
-	public void preencherDados(Scanner scanner) {
-		System.out.print("Marca: ");
-		this.marca = scanner.nextLine();
-		System.out.print("Modelo: ");
-		this.modelo = scanner.nextLine();
-		System.out.print("Tamanho do quadro: ");
-		this.tamanho = scanner.nextDouble();
-		System.out.print("Preço: ");
-		this.preco = scanner.nextDouble();
-		scanner.nextLine();
-	}
-
-	public void imprimirDados() {
-		System.out.println("Informações da Bicicleta:");
-		System.out.println("Marca: " + getMarca());
-		System.out.println("Modelo: " + getModelo());
-		System.out.println("Tamanho do quadro: " + getTamanho());
-		System.out.printf("Preço: R$%.2f\n", getPreco());
-	}
 }

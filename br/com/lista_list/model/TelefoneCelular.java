@@ -53,23 +53,4 @@ public class TelefoneCelular {
 	public int getMemoria() {
 		return memoria;
 	}
-
-	public void preencherDados(Scanner scanner) {
-		System.out.print("Marca: ");
-		this.marca = scanner.nextLine();
-		System.out.print("Modelo: ");
-		this.modelo = scanner.nextLine();
-		System.out.print("Preço: R$");
-		this.preco = scanner.nextDouble();
-		System.out.print("Memória (GB): ");
-		this.memoria = scanner.nextInt();
-		scanner.nextLine();
-	}
-
-	public void imprimirDados() {
-		System.out.println("Marca: " + getMarca());
-		System.out.println("Modelo: " + getModelo());
-		System.out.printf("Preço: R$%.2f\n", getPreco());
-		System.out.println("Memória: " + getMemoria() + "GB");
-	}
 }

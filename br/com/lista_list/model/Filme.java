@@ -53,24 +53,4 @@ public class Filme {
 	public double getPreco() {
 		return preco;
 	}
-
-	public void preencherDados(Scanner scanner) {
-		System.out.print("Título: ");
-		this.titulo = scanner.nextLine();
-		System.out.print("Diretor: ");
-		this.diretor = scanner.nextLine();
-		System.out.print("Duração (minutos): ");
-		this.duracao = scanner.nextInt();
-		System.out.print("Preço: R$");
-		this.preco = scanner.nextDouble();
-		scanner.nextLine();
-	}
-
-	public void imprimirDados() {
-		System.out.println("Informações do Filme:");
-		System.out.println("Título: " + getTitulo());
-		System.out.println("Diretor: " + getDiretor());
-		System.out.println("Duração: " + getDuracao() + " minutos");
-		System.out.printf("Preço: R$%.2f\n", getPreco());
-	}
 }

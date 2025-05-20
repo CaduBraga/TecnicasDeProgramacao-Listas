@@ -53,24 +53,4 @@ public class TV {
 	public double getPreco() {
 		return preco;
 	}
-
-	public void preencherDados(Scanner scanner) {
-		System.out.print("Marca: ");
-		TV.marca = scanner.nextLine();
-		System.out.print("Tamanho (polegadas): ");
-		TV.tamanho = scanner.nextDouble();
-		scanner.nextLine();
-		System.out.print("Resolução (pixels): ");
-		TV.resolucao = scanner.nextLine();
-		System.out.print("Preço: R$");
-		TV.preco = scanner.nextDouble();
-		scanner.nextLine();
-	}
-
-	public void imprimirDados() {
-		System.out.println("Marca: " + getMarca());
-		System.out.println("Tamanho: " + getTamanho() + " polegadas");
-		System.out.println("Resolução: " + getResolucao() + " pixels");
-		System.out.printf("Preço: R$%.2f\n", getPreco());
-	}
 }
