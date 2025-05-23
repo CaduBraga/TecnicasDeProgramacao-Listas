@@ -24,29 +24,40 @@ Este é um sistema desenvolvido em Java como parte das atividades práticas da u
 
 ```
 br/com/lista_list/
-├── .gitignore                   # Configuração de arquivos ignorados pelo Git
-├── README.md                    # Documentação do projeto
-├── Principal.java               # Classe principal do programa
-├── model/
-│   ├── Listas.java              # Classe que contém as listas
-│   ├── TelefoneCelular.java     # Modelo para telefones celulares
-│   ├── TV.java                  # Modelo para televisões
-│   ├── Casa.java                # Modelo para casas
-│   ├── Aluno.java               # Modelo para alunos
-│   ├── Livro.java               # Modelo para livros
-│   ├── AnimalDeEstimacao.java   # Modelo para animais de estimação
-│   ├── Bicicleta.java           # Modelo para bicicletas
-│   ├── Filme.java               # Modelo para filmes
-│   ├── Musica.java              # Modelo para músicas
-│   ├── JogoVideogame.java       # Modelo para jogos de videogame
-│   └── BolsaDeValores.java      # Modelo para bolsa de valores
-├── service/
-│   ├── Acessar.java             # Serviço para acessar listas
-│   ├── Encerrar.java            # Serviço para encerrar o programa
-│   ├── Inserir.java             # Serviço para inserir itens
-│   └── Remover.java             # Serviço para remover itens
-└── views/
-    └── Menu.java                # Interface do menu principal
+├── .gitignore                # Arquivos ignorados pelo Git
+├── README.md                 # Documentação do projeto
+├── Main.java                 # Classe principal que executa o sistema
+├── model/                    # Classes de modelo (criação da classe com atributos e método construtor)
+│ ├── Aluno.java
+│ ├── AnimalDeEstimacao.java
+│ ├── Bicicleta.java
+│ ├── BolsaDeValores.java
+│ ├── Casa.java
+│ ├── Filme.java
+│ ├── JogoVideogame.java
+│ ├── Livro.java
+│ ├── Listas.java
+│ ├── Musica.java
+│ ├── TelefoneCelular.java
+│ └── TV.java
+├── service/                 # Lógica de programação e os códigos funcionando
+│ ├── Acessar.java
+│ ├── Encerrar.java
+│ ├── Inserir.java
+│ └── Remover.java
+└── views/                   # Entrada e saída de dados (interface do usuário)
+├── Escolhas.java
+├── ViewAluno.java
+├── ViewAnimal.java
+├── ViewBicicleta.java
+├── ViewBolsa.java
+├── ViewCasa.java
+├── ViewFilme.java
+├── ViewJogo.java
+├── ViewLivro.java
+├── ViewMusica.java
+├── ViewTelefone.java
+└── ViewTV.java
 ```
 
 ## Como Executar
