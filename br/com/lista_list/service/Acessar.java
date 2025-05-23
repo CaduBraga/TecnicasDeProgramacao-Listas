@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import br.com.lista_list.model.*;
-import br.com.lista_list.views.Escolhas;
+import br.com.lista_list.views.*;
 
 public class Acessar {
 
@@ -27,13 +27,12 @@ public class Acessar {
                     for (int i = 0; i < telefoneCelular.size(); i++) {
                         System.out.println((i + 1) + " - " + telefoneCelular.get(i).getModelo());
                     }
-
                     System.out.print("Digite o número do item que deseja acessar: ");
                     indice = scanner.nextInt() - 1;
                     scanner.nextLine();
-
                     if (indice >= 0 && indice < telefoneCelular.size()) {
-                        telefoneCelular.get(indice).imprimirDados();
+                        ViewTelefone viewTelefone = new ViewTelefone(telefoneCelular.get(indice));
+                        viewTelefone.imprimirDados();
                     } else {
                         System.out.println("Índice inválido.");
                     }
@@ -52,7 +51,8 @@ public class Acessar {
                         scanner.nextLine();
 
                         if (indice >= 0 && indice < televisao.size()) {
-                            televisao.get(indice).imprimirDados();
+                            ViewTV viewTV = new ViewTV(televisao.get(indice));
+                            viewTV.imprimirDados();
                         } else {
                             System.out.println("Índice inválido.");
                         }
@@ -72,7 +72,8 @@ public class Acessar {
                         scanner.nextLine();
 
                         if (indice >= 0 && indice < casa.size()) {
-                            casa.get(indice).imprimirDados();
+                            ViewCasa viewCasa = new ViewCasa(casa.get(indice));
+                            viewCasa.imprimirDados();
                         } else {
                             System.out.println("Índice inválido.");
                         }
@@ -92,7 +93,8 @@ public class Acessar {
                         scanner.nextLine();
 
                         if (indice >= 0 && indice < aluno.size()) {
-                            aluno.get(indice).imprimirDados();
+                            ViewAluno viewAluno = new ViewAluno(aluno.get(indice));
+                            viewAluno.imprimirDados();
                         } else {
                             System.out.println("Índice inválido.");
                         }
@@ -112,7 +114,8 @@ public class Acessar {
                         scanner.nextLine();
 
                         if (indice >= 0 && indice < livro.size()) {
-                            livro.get(indice).imprimirDados();
+                            ViewLivro viewLivro = new ViewLivro(livro.get(indice));
+                            viewLivro.imprimirDados();
                         } else {
                             System.out.println("Índice inválido.");
                         }
@@ -132,7 +135,8 @@ public class Acessar {
                         scanner.nextLine();
 
                         if (indice >= 0 && indice < animal.size()) {
-                            animal.get(indice).imprimirDados();
+                            ViewAnimal viewAnimal = new ViewAnimal(animal.get(indice));
+                            viewAnimal.imprimirDados();
                         } else {
                             System.out.println("Índice inválido.");
                         }
@@ -152,7 +156,8 @@ public class Acessar {
                         scanner.nextLine();
 
                         if (indice >= 0 && indice < bicicleta.size()) {
-                            bicicleta.get(indice).imprimirDados();
+                            ViewBicicleta viewBicicleta = new ViewBicicleta(bicicleta.get(indice));
+                            viewBicicleta.imprimirDados();
                         } else {
                             System.out.println("Índice inválido.");
                         }
@@ -172,7 +177,8 @@ public class Acessar {
                         scanner.nextLine();
 
                         if (indice >= 0 && indice < filme.size()) {
-                            filme.get(indice).imprimirDados();
+                            ViewFilme viewFilme = new ViewFilme(filme.get(indice));
+                            viewFilme.imprimirDados();
                         } else {
                             System.out.println("Índice inválido.");
                         }
@@ -192,7 +198,8 @@ public class Acessar {
                         scanner.nextLine();
 
                         if (indice >= 0 && indice < musica.size()) {
-                            musica.get(indice).imprimirDados();
+                            ViewMusica viewMusica = new ViewMusica(musica.get(indice));
+                            viewMusica.imprimirDados();
                         } else {
                             System.out.println("Índice inválido.");
                         }
@@ -212,7 +219,8 @@ public class Acessar {
                         scanner.nextLine();
 
                         if (indice >= 0 && indice < jogo.size()) {
-                            jogo.get(indice).imprimirDados();
+                            ViewJogo viewJogo = new ViewJogo(jogo.get(indice));
+                            viewJogo.imprimirDados();
                         } else {
                             System.out.println("Índice inválido.");
                         }
@@ -232,7 +240,8 @@ public class Acessar {
                         scanner.nextLine();
 
                         if (indice >= 0 && indice < bolsa.size()) {
-                            bolsa.get(indice).imprimirDados();
+                            ViewBolsa viewBolsa = new ViewBolsa(bolsa.get(indice));
+                            viewBolsa.imprimirDados();
                         } else {
                             System.out.println("Índice inválido.");
                         }

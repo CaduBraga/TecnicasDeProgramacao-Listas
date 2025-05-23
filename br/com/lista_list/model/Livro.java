@@ -1,7 +1,5 @@
 package br.com.lista_list.model;
 
-import java.util.Scanner;
-
 public class Livro {
 	private String titulo;
 	private String autor;

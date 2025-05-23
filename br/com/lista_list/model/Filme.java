@@ -1,7 +1,5 @@
 package br.com.lista_list.model;
 
-import java.util.Scanner;
-
 public class Filme {
 	private String titulo;
 	private String diretor;
