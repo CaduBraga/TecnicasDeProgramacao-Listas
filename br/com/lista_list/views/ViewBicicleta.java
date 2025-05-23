@@ -1,26 +1,32 @@
 package br.com.lista_list.views;
 
-import br.com.lista_list.model.Bicicleta;
 import java.util.Scanner;
+import br.com.lista_list.model.Bicicleta;
 
-public class ViewBicicleta extends Bicicleta {
+public class ViewBicicleta {
+    private Bicicleta bicicleta;
+
+    public ViewBicicleta(Bicicleta bicicleta) {
+        this.bicicleta = bicicleta;
+    }
+
     public void preencherDados(Scanner scanner) {
         System.out.print("Marca: ");
-        setMarca(scanner.nextLine());
+        bicicleta.setMarca(scanner.nextLine());
         System.out.print("Modelo: ");
-        setModelo(scanner.nextLine());
+        bicicleta.setModelo(scanner.nextLine());
         System.out.print("Tamanho do quadro: ");
-        setTamanho(scanner.nextDouble());
+        bicicleta.setTamanho(scanner.nextDouble());
         System.out.print("Preço: ");
-        setPreco(scanner.nextDouble());
+        bicicleta.setPreco(scanner.nextDouble());
         scanner.nextLine();
     }
 
     public void imprimirDados() {
         System.out.println("Informações da Bicicleta:");
-        System.out.println("Marca: " + getMarca());
-        System.out.println("Modelo: " + getModelo());
-        System.out.println("Tamanho do quadro: " + getTamanho());
-        System.out.printf("Preço: R$%.2f\n", getPreco());
+        System.out.println("Marca: " + bicicleta.getMarca());
+        System.out.println("Modelo: " + bicicleta.getModelo());
+        System.out.println("Tamanho do quadro: " + bicicleta.getTamanho());
+        System.out.printf("Preço: R$%.2f\n", bicicleta.getPreco());
     }
-} 
+}

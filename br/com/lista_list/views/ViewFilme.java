@@ -1,26 +1,33 @@
 package br.com.lista_list.views;
 
-import br.com.lista_list.model.Filme;
 import java.util.Scanner;
 
-public class ViewFilme extends Filme {
+import br.com.lista_list.model.Filme;
+
+public class ViewFilme {
+    private Filme filme;
+
+    public ViewFilme(Filme filme) {
+        this.filme = filme;
+    }
+
     public void preencherDados(Scanner scanner) {
         System.out.print("Título: ");
-        setTitulo(scanner.nextLine());
+        filme.setTitulo(scanner.nextLine());
         System.out.print("Diretor: ");
-        setDiretor(scanner.nextLine());
+        filme.setDiretor(scanner.nextLine());
         System.out.print("Duração (minutos): ");
-        setDuracao(scanner.nextInt());
+        filme.setDuracao(scanner.nextInt());
         System.out.print("Preço: R$");
-        setPreco(scanner.nextDouble());
+        filme.setPreco(scanner.nextDouble());
         scanner.nextLine();
     }
 
     public void imprimirDados() {
         System.out.println("Informações do Filme:");
-        System.out.println("Título: " + getTitulo());
-        System.out.println("Diretor: " + getDiretor());
-        System.out.println("Duração: " + getDuracao() + " minutos");
-        System.out.printf("Preço: R$%.2f\n", getPreco());
+        System.out.println("Título: " + filme.getTitulo());
+        System.out.println("Diretor: " + filme.getDiretor());
+        System.out.println("Duração: " + filme.getDuracao() + " minutos");
+        System.out.printf("Preço: R$%.2f\n", filme.getPreco());
     }
-} 
+}

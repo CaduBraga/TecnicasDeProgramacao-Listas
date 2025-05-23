@@ -1,26 +1,32 @@
 package br.com.lista_list.views;
 
-import br.com.lista_list.model.BolsaDeValores;
 import java.util.Scanner;
+import br.com.lista_list.model.BolsaDeValores;
 
-public class ViewBolsa extends BolsaDeValores {
+public class ViewBolsa {
+    private BolsaDeValores bolsa;
+
+    public ViewBolsa(BolsaDeValores bolsa) {
+        this.bolsa = bolsa;
+    }
+
     public void preencherDados(Scanner scanner) {
         System.out.print("Nome da Empresa: ");
-        setNome(scanner.nextLine());
+        bolsa.setNome(scanner.nextLine());
         System.out.print("Preço da ação: R$");
-        setPreco(scanner.nextDouble());
+        bolsa.setPreco(scanner.nextDouble());
         System.out.print("Volume de Negociações: ");
-        setVolume(scanner.nextDouble());
+        bolsa.setVolume(scanner.nextDouble());
         System.out.print("Variação Diária (%): ");
-        setVariacao(scanner.nextDouble());
-        scanner.nextLine();
+        bolsa.setVariacao(scanner.nextDouble());
+        scanner.nextLine(); // Limpar o buffer
     }
 
     public void imprimirDados() {
         System.out.println("Informações da Bolsa de Valores:");
-        System.out.println("Nome da Empresa: " + getNome());
-        System.out.printf("Preço da ação: R$%.2f\n", getPreco());
-        System.out.println("Volume de Negociações: " + getVolume());
-        System.out.println("Variação Diária: " + getVariacao() + "%");
+        System.out.println("Nome da Empresa: " + bolsa.getNome());
+        System.out.printf("Preço da ação: R$%.2f\n", bolsa.getPreco());
+        System.out.println("Volume de Negociações: " + bolsa.getVolume());
+        System.out.println("Variação Diária: " + bolsa.getVariacao() + "%");
     }
-} 
+}

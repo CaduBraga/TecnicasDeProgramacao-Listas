@@ -1,26 +1,33 @@
 package br.com.lista_list.views;
 
-import br.com.lista_list.model.Casa;
 import java.util.Scanner;
 
-public class ViewCasa extends Casa {
+import br.com.lista_list.model.Casa;
+
+public class ViewCasa {
+    private Casa casa;
+
+    public ViewCasa(Casa casa) {
+        this.casa = casa;
+    }
+
     public void preencherDados(Scanner scanner) {
         System.out.print("Endereço: ");
-        setEndereco(scanner.nextLine());
+        casa.setEndereco(scanner.nextLine());
         System.out.print("Área (m²): ");
-        setArea(scanner.nextDouble());
+        casa.setArea(scanner.nextDouble());
         System.out.print("Número de quartos: ");
-        setQuartos(scanner.nextInt());
+        casa.setQuartos(scanner.nextInt());
         System.out.print("Preço: R$");
-        setPreco(scanner.nextDouble());
+        casa.setPreco(scanner.nextDouble());
         scanner.nextLine();
     }
 
     public void imprimirDados() {
         System.out.println("Informações da Casa:");
-        System.out.println("Endereço: " + getEndereco());
-        System.out.println("Área: " + getArea() + " m²");
-        System.out.println("Número de quartos: " + getQuartos());
-        System.out.printf("Preço: R$%.2f\n", getPreco());
+        System.out.println("Endereço: " + casa.getEndereco());
+        System.out.println("Área: " + casa.getArea() + " m²");
+        System.out.println("Número de quartos: " + casa.getQuartos());
+        System.out.printf("Preço: R$%.2f\n", casa.getPreco());
     }
-} 
+}

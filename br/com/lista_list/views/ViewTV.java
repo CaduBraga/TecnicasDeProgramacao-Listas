@@ -1,26 +1,34 @@
 package br.com.lista_list.views;
 
-import br.com.lista_list.model.TV;
 import java.util.Scanner;
 
-public class ViewTV extends TV {
+import br.com.lista_list.model.TV;
+
+public class ViewTV {
+    private TV tv;
+
+    public ViewTV(TV tv) {
+        this.tv = tv;
+    }
+
     public void preencherDados(Scanner scanner) {
         System.out.print("Marca: ");
-        setMarca(scanner.nextLine());
+        tv.setMarca(scanner.nextLine());
         System.out.print("Tamanho (polegadas): ");
-        setTamanho(scanner.nextDouble());
-        scanner.nextLine();
+        tv.setTamanho(scanner.nextDouble());
+        scanner.nextLine(); // Limpa o buffer após nextDouble
         System.out.print("Resolução (pixels): ");
-        setResolucao(scanner.nextLine());
+        tv.setResolucao(scanner.nextLine());
         System.out.print("Preço: R$");
-        setPreco(scanner.nextDouble());
-        scanner.nextLine();
+        tv.setPreco(scanner.nextDouble());
+        scanner.nextLine(); // Limpa o buffer após nextDouble
     }
 
     public void imprimirDados() {
-        System.out.println("Marca: " + getMarca());
-        System.out.println("Tamanho: " + getTamanho() + " polegadas");
-        System.out.println("Resolução: " + getResolucao() + " pixels");
-        System.out.printf("Preço: R$%.2f\n", getPreco());
+        System.out.println("Informações da TV:");
+        System.out.println("Marca: " + tv.getMarca());
+        System.out.println("Tamanho: " + tv.getTamanho() + " polegadas");
+        System.out.println("Resolução: " + tv.getResolucao() + " pixels");
+        System.out.printf("Preço: R$%.2f\n", tv.getPreco());
     }
-} 
+}

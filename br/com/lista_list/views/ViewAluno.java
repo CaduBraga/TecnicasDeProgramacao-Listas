@@ -1,28 +1,30 @@
 package br.com.lista_list.views;
 
 import java.util.Scanner;
-
 import br.com.lista_list.model.Aluno;
 
-public class ViewAluno extends Aluno{
-    
+public class ViewAluno {
+    private Aluno aluno;
+    public ViewAluno(Aluno aluno) {
+        this.aluno = aluno;
+    }
     public void preencherDados(Scanner scanner) {
         System.out.print("Nome: ");
-        setNome(scanner.nextLine());
+        aluno.setNome(scanner.nextLine());
         System.out.print("Idade (anos): ");
-        setIdade(scanner.nextInt());
+        aluno.setIdade(scanner.nextInt());
+        scanner.nextLine();
         System.out.print("Matrícula: ");
-        setMatricula(scanner.nextLine());
+        aluno.setMatricula(scanner.nextLine());
         System.out.print("Ano de ingresso: ");
-        setAnoIngresso(scanner.nextInt());
+        aluno.setAnoIngresso(scanner.nextInt());
         scanner.nextLine();
     }
-
-	public void imprimirDados() {
-		System.out.println("Informações do Aluno:");
-		System.out.println("Nome: " + getNome());
-		System.out.println("Idade: " + getIdade() + " anos");
-		System.out.println("Matrícula: " + getMatricula());
-		System.out.println("Ano de Ingresso: " + getAnoIngresso());
-	}
+    public void imprimirDados() {
+        System.out.println("Informações do Aluno:");
+        System.out.println("Nome: " + aluno.getNome());
+        System.out.println("Idade: " + aluno.getIdade() + " anos");
+        System.out.println("Matrícula: " + aluno.getMatricula());
+        System.out.println("Ano de Ingresso: " + aluno.getAnoIngresso());
+    }
 }
